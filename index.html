@@ -3,1238 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gofourth Pools | Premium Pool Remodeling</title>
+    <title>DGOS | D. Gofourth On-Site Solutions | Outdoor Living Specialists</title>
+    <meta name="description" content="DGOS specializes in landscape construction, custom pools, hardscaping, and outdoor living spaces. Serving Arizona with quality craftsmanship.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-midnight: #0a1628;
-            --color-deep-blue: #142744;
-            --color-ocean: #1a5f7a;
-            --color-teal: #2d9596;
-            --color-aqua: #57c5b6;
-            --color-cream: #f8f6f2;
-            --color-sand: #e8e4dc;
-            --color-gold: #c9a962;
-            --color-white: #ffffff;
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', -apple-system, sans-serif;
-            --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--color-cream);
-            color: var(--color-midnight);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.5rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.4s var(--transition-smooth);
-        }
-
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 1rem 4rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: var(--color-white);
-            transition: color 0.3s ease;
-        }
-
-        nav.scrolled .logo {
-            color: var(--color-midnight);
-        }
-
-        .logo-placeholder {
-            width: 50px;
-            height: 50px;
-            border: 2px dashed currentColor;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            opacity: 0.7;
-        }
-
-        .logo-text {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--color-white);
-            font-weight: 400;
-            font-size: 0.95rem;
-            letter-spacing: 0.03em;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav.scrolled .nav-links a {
-            color: var(--color-midnight);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--color-gold);
-            transition: width 0.3s var(--transition-smooth);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            padding: 0.75rem 1.75rem;
-            background: var(--color-gold);
-            color: var(--color-midnight) !important;
-            border-radius: 4px;
-            font-weight: 500;
-        }
-
-        .nav-cta::after {
-            display: none !important;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero-media {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-
-        .hero-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--color-midnight) 0%, var(--color-deep-blue) 50%, var(--color-ocean) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .hero-placeholder-icon {
-            width: 120px;
-            height: 120px;
-            border: 3px dashed currentColor;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-placeholder-icon svg {
-            width: 50px;
-            height: 50px;
-            opacity: 0.6;
-        }
-
-        .hero-placeholder-text {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to bottom,
-                rgba(10, 22, 40, 0.4) 0%,
-                rgba(10, 22, 40, 0.2) 50%,
-                rgba(10, 22, 40, 0.6) 100%
-            );
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: var(--color-white);
-            max-width: 900px;
-            padding: 2rem;
-        }
-
-        .hero-tagline {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 1s var(--transition-smooth) 0.3s forwards;
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 400;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 1s var(--transition-smooth) 0.5s forwards;
-        }
-
-        .hero-title em {
-            font-style: italic;
-            color: var(--color-aqua);
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            font-weight: 300;
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.9;
-            line-height: 1.8;
-            opacity: 0;
-            animation: fadeUp 1s var(--transition-smooth) 0.7s forwards;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            gap: 1rem;
-            opacity: 0;
-            animation: fadeUp 1s var(--transition-smooth) 0.9s forwards;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s var(--transition-smooth);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--color-gold);
-            color: var(--color-midnight);
-        }
-
-        .btn-primary:hover {
-            background: var(--color-white);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--color-white);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .btn-outline:hover {
-            background: var(--color-white);
-            color: var(--color-midnight);
-            border-color: var(--color-white);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-white);
-            opacity: 0.6;
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator span {
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
-        }
-
-        /* About Section */
-        .about {
-            padding: 8rem 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .about-content h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content h2 em {
-            font-style: italic;
-            color: var(--color-ocean);
-        }
-
-        .about-content p {
-            font-size: 1.05rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.9;
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-        }
-
-        .about-feature {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .about-feature-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--color-teal);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .about-feature-icon svg {
-            width: 20px;
-            height: 20px;
-            color: var(--color-white);
-        }
-
-        .about-feature span {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--color-midnight);
-        }
-
-        .about-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .about-image {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image:first-child {
-            grid-column: span 2;
-        }
-
-        .image-placeholder {
-            aspect-ratio: 16/10;
-            background: linear-gradient(135deg, var(--color-sand) 0%, #d4cfc4 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            border: 2px dashed #ccc;
-        }
-
-        .image-placeholder.tall {
-            aspect-ratio: 4/5;
-        }
-
-        .image-placeholder svg {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 0.5rem;
-            opacity: 0.5;
-        }
-
-        .image-placeholder span {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: var(--color-midnight);
-            padding: 5rem 4rem;
-        }
-
-        .stats-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            color: var(--color-white);
-        }
-
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
-            color: var(--color-gold);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            opacity: 0.8;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 8rem 4rem;
-            background: var(--color-white);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 5rem;
-        }
-
-        .section-header .label {
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--color-teal);
-            margin-bottom: 1rem;
-        }
-
-        .section-header h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        .services-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--color-cream);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.4s var(--transition-smooth);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-        }
-
-        .service-image {
-            height: 280px;
-            background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-ocean) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.4);
-            border-bottom: 3px solid var(--color-gold);
-        }
-
-        .service-image svg {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 0.75rem;
-            opacity: 0.5;
-        }
-
-        .service-image span {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-        }
-
-        .service-content {
-            padding: 2rem;
-        }
-
-        .service-content h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
-            color: var(--color-midnight);
-        }
-
-        .service-content p {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 8rem 4rem;
-            background: var(--color-sand);
-        }
-
-        .gallery-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 280px);
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .gallery-item:nth-child(1) {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .gallery-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-ocean) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.4);
-            transition: all 0.4s var(--transition-smooth);
-        }
-
-        .gallery-item:hover .gallery-placeholder {
-            transform: scale(1.05);
-        }
-
-        .gallery-placeholder svg {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 0.5rem;
-            opacity: 0.5;
-        }
-
-        .gallery-placeholder span {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(10, 22, 40, 0.8) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: flex-end;
-            padding: 1.5rem;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay span {
-            color: var(--color-white);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 8rem 4rem;
-            background: var(--color-white);
-        }
-
-        .testimonials-slider {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial {
-            text-align: center;
-            padding: 3rem;
-        }
-
-        .testimonial-quote {
-            font-family: var(--font-display);
-            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.6;
-            color: var(--color-midnight);
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .testimonial-quote::before {
-            content: '"';
-            font-size: 5rem;
-            position: absolute;
-            top: -2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--color-gold);
-            opacity: 0.3;
-            font-family: var(--font-display);
-            line-height: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .testimonial-author strong {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--color-midnight);
-        }
-
-        .testimonial-author span {
-            font-size: 0.9rem;
-            color: var(--color-teal);
-        }
-
-        .testimonial-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 2rem;
-        }
-
-        .testimonial-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--color-sand);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-dot.active {
-            background: var(--color-gold);
-            transform: scale(1.2);
-        }
-
-        /* Process Section */
-        .process {
-            padding: 8rem 4rem;
-            background: linear-gradient(135deg, var(--color-midnight) 0%, var(--color-deep-blue) 100%);
-            color: var(--color-white);
-        }
-
-        .process .section-header {
-            color: var(--color-white);
-        }
-
-        .process .section-header .label {
-            color: var(--color-gold);
-        }
-
-        .process .section-header p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .process-steps {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .process-step {
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 3.5rem;
-            right: -1rem;
-            width: 2rem;
-            height: 2px;
-            background: var(--color-gold);
-            opacity: 0.5;
-        }
-
-        .process-step:last-child::after {
-            display: none;
-        }
-
-        .process-number {
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            font-weight: 400;
-            color: var(--color-gold);
-            line-height: 1;
-            margin-bottom: 1.5rem;
-        }
-
-        .process-step h3 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
-        }
-
-        .process-step p {
-            font-size: 0.9rem;
-            line-height: 1.7;
-            opacity: 0.8;
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 8rem 4rem;
-            background: var(--color-cream);
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn-dark {
-            background: var(--color-midnight);
-            color: var(--color-white);
-        }
-
-        .btn-dark:hover {
-            background: var(--color-deep-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 8rem 4rem;
-            background: var(--color-white);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .contact-info h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--color-cream);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-icon svg {
-            width: 22px;
-            height: 22px;
-            color: var(--color-teal);
-        }
-
-        .contact-item-content strong {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-item-content span {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .contact-form {
-            background: var(--color-cream);
-            padding: 3rem;
-            border-radius: 12px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--color-midnight);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            background: var(--color-white);
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--color-teal);
-            box-shadow: 0 0 0 3px rgba(45, 149, 150, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .contact-form .btn {
-            width: 100%;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--color-midnight);
-            color: var(--color-white);
-            padding: 5rem 4rem 2rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-
-        .footer-brand .logo {
-            color: var(--color-white);
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-brand p {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            opacity: 0.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-white);
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--color-gold);
-            border-color: var(--color-gold);
-            color: var(--color-midnight);
-        }
-
-        .footer-column h4 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-column a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column a:hover {
-            color: var(--color-gold);
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        /* Mobile Menu Toggle */
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .mobile-toggle span {
-            width: 25px;
-            height: 2px;
-            background: var(--color-white);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled .mobile-toggle span {
-            background: var(--color-midnight);
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .about,
-            .contact {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 200px);
-            }
-
-            .gallery-item:nth-child(1) {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-step::after {
-                display: none;
-            }
-
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem 1.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-toggle {
-                display: flex;
-            }
-
-            .hero-content {
-                padding: 1rem;
-            }
-
-            .about,
-            .services,
-            .gallery,
-            .testimonials,
-            .process,
-            .cta,
-            .contact {
-                padding: 5rem 1.5rem;
-            }
-
-            .stats {
-                padding: 4rem 1.5rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(5, 200px);
-            }
-
-            .gallery-item:nth-child(1) {
-                grid-column: span 1;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-
-            .about-images {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image:first-child {
-                grid-column: span 1;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo">
-            <div class="logo-placeholder">Logo</div>
-            <span class="logo-text">Gofourth Pools</span>
+        <a href="index.html" class="logo">
+            <img src="./img/DarkBackground.png" alt="DGOS" id="nav-logo">
         </a>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
         </ul>
-        <div class="mobile-toggle">
+        <div class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-media">
-            <div class="hero-placeholder">
-                <div class="hero-placeholder-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
-                    </svg>
-                </div>
-                <span class="hero-placeholder-text">Hero Video / Image Placeholder</span>
-            </div>
+            <img src="./img/project1.JPEG" alt="DGOS Outdoor Living">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-tagline">Premium Pool Remodeling</p>
-            <h1 class="hero-title">Transform Your Backyard Into a <em>Private Paradise</em></h1>
-            <p class="hero-subtitle">We specialize in luxury pool renovations that elevate your outdoor living experience. From stunning tile work to complete pool transformations.</p>
+            <p class="hero-tagline">Outdoor Living Specialists</p>
+            <h1 class="hero-title">Transforming Spaces Into <em>Living Destinations</em></h1>
+            <p class="hero-subtitle">Landscape construction, custom pools, hardscaping, and complete outdoor living solutions. Quality craftsmanship throughout Arizona.</p>
             <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Request Free Consultation</a>
-                <a href="#gallery" class="btn btn-outline">View Our Work</a>
+                <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+                <a href="services.html" class="btn btn-outline">Our Services</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -1245,405 +65,212 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2>Crafting <em>Extraordinary</em> Pool Experiences Since 2005</h2>
-            <p>With nearly two decades of experience, we've built our reputation on meticulous craftsmanship, innovative design, and an unwavering commitment to exceeding our clients' expectations.</p>
-            <p>Every pool we remodel is a testament to our passion for creating outdoor spaces that inspire. From modern geometric designs to classic resort-style retreats, we bring your vision to life with precision and artistry.</p>
-            <div class="about-features">
-                <div class="about-feature">
-                    <div class="about-feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <span>Licensed & Insured</span>
-                </div>
-                <div class="about-feature">
-                    <div class="about-feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <span>On-Time Completion</span>
-                </div>
-                <div class="about-feature">
-                    <div class="about-feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                        </svg>
-                    </div>
-                    <span>Premium Materials</span>
-                </div>
-                <div class="about-feature">
-                    <div class="about-feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
-                    </div>
-                    <span>5-Year Warranty</span>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-intro">
+                <div class="services-intro-content">
+                    <p class="label" style="font-size: 0.85rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-teal); margin-bottom: 0.75rem;">What We Do</p>
+                    <h2>Complete Outdoor <em>Solutions</em></h2>
+                    <p>DGOS specializes in landscape construction and custom pools — handling everything from initial design through final construction. Whether it's a backyard transformation or a large commercial project, we deliver quality craftsmanship on every job.</p>
                 </div>
             </div>
-        </div>
-        <div class="about-images">
-            <div class="about-image">
-                <div class="image-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Pool Image 1</span>
+            
+            <!-- Two Main Categories -->
+            <div class="service-categories">
+                <div class="service-category-card primary">
+                    <h3>Landscape Construction</h3>
+                    <p>Our primary specialty — creating stunning outdoor environments from the ground up.</p>
+                    <div class="category-list">
+                        <span>Landscape</span>
+                        <span>Hardscape</span>
+                        <span>Outdoor Living</span>
+                        <span>Site Prep</span>
+                        <span>Land Clearing</span>
+                        <span>Demo</span>
+                    </div>
+                </div>
+                <div class="service-category-card secondary">
+                    <h3>Custom Pool Construction</h3>
+                    <p>Expert pool building and remodeling — from new builds to complete renovations.</p>
+                    <div class="category-list">
+                        <span>New Pools</span>
+                        <span>Pool Remodeling</span>
+                        <span>Water Features</span>
+                        <span>Pool Decks</span>
+                    </div>
                 </div>
             </div>
-            <div class="about-image">
-                <div class="image-placeholder tall">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Pool Image 2</span>
+
+            <!-- Modern Services Grid -->
+            <div class="services-list-section">
+                <h3 class="services-heading">Our Services Include</h3>
+
+                <div class="services-grid">
+                    <div>Commercial Projects</div>
+                    <div>Residential Projects</div>
+                    <div>Design & Planning</div>
+                    <div>Landscape Installation</div>
+                    <div>Hardscape & Pavers</div>
+                    <div>Outdoor Living Spaces</div>
+                    <div>Custom Pool Construction</div>
+                    <div>Pool Remodeling</div>
+                    <div>Site Preparation</div>
+                    <div>Land Clearing</div>
+                    <div>Demolition</div>
+                    <div>And More...</div>
                 </div>
             </div>
-            <div class="about-image">
-                <div class="image-placeholder tall">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Pool Image 3</span>
-                </div>
+
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
+    <!-- Stats -->
+    <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item">
                 <div class="stat-number">500+</div>
-                <div class="stat-label">Pools Remodeled</div>
+                <div class="stat-label">Projects Completed</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">19</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Client Satisfaction</div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Licensed & Insured</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Year Warranty</div>
+                <div class="stat-number">5★</div>
+                <div class="stat-label">Client Reviews</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-header">
-            <p class="label">Our Services</p>
-            <h2>Complete Pool Transformation Solutions</h2>
-            <p>From minor updates to complete renovations, we offer comprehensive services to bring your dream pool to life.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Service Image</span>
-                </div>
-                <div class="service-content">
-                    <h3>Pool Resurfacing</h3>
-                    <p>Restore your pool's beauty with premium plaster, pebble, or quartz finishes. We use only the highest quality materials for lasting results.</p>
-                </div>
+    <!-- Featured Projects -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="label">Featured Work</p>
+                <h2>Recent Projects</h2>
+                <p>A selection of our latest landscape, hardscape, and pool projects across Arizona.</p>
             </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Service Image</span>
-                </div>
-                <div class="service-content">
-                    <h3>Tile & Coping</h3>
-                    <p>Upgrade your waterline with stunning glass, porcelain, or natural stone tile. Custom coping options to match any design aesthetic.</p>
-                </div>
+            
+            <div class="featured-grid">
+                <a href="gallery.html" class="featured-card">
+                    <div class="featured-image">
+                        <img src="./img/lighting.JPEG" alt="Front Yard Landscape & Lighting">
+                    </div>
+                    <div class="featured-content">
+                        <span class="featured-tag">Outdoor Living</span>
+                        <h3>Front Yard Landscape & Lighting</h3>
+                        <p>Elegant front yard design highlighted by warm outdoor lighting, refined plantings, and a welcoming entry experience at dusk.</p>
+                    </div>
+                </a>
+                
+                <a href="gallery.html" class="featured-card">
+                    <div class="featured-image">
+                        <img src="./img/modernpool.JPEG" alt="Modern Pool Renovation">
+                    </div>
+                    <div class="featured-content">
+                        <span class="featured-tag">Pool Remodel</span>
+                        <h3>Modern Pool Renovation</h3>
+                        <p>Complete pool resurface with new tile, coping, and expanded travertine deck.</p>
+                    </div>
+                </a>
+                
+                <a href="gallery.html" class="featured-card">
+                    <div class="featured-image">
+                        <img src="./img/firepit.JPEG" alt="Paver Patio & Firepit">
+                    </div>
+                    <div class="featured-content">
+                        <span class="featured-tag">Hardscape</span>
+                        <h3>Paver Patio & Firepit</h3>
+                        <p>Custom paver installation with built-in seating and gas firepit feature.</p>
+                    </div>
+                </a>
             </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Service Image</span>
-                </div>
-                <div class="service-content">
-                    <h3>Deck Remodeling</h3>
-                    <p>Transform your pool deck with travertine, pavers, or cool deck coatings. Create the perfect outdoor entertaining space.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Service Image</span>
-                </div>
-                <div class="service-content">
-                    <h3>Water Features</h3>
-                    <p>Add elegance with custom waterfalls, fountains, spillovers, and bubblers. Create a resort-like atmosphere in your backyard.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Service Image</span>
-                </div>
-                <div class="service-content">
-                    <h3>LED Lighting</h3>
-                    <p>Illuminate your pool with energy-efficient LED systems. Color-changing options for the perfect ambiance day or night.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Service Image</span>
-                </div>
-                <div class="service-content">
-                    <h3>Equipment Upgrades</h3>
-                    <p>Modernize with variable speed pumps, salt systems, and smart automation. Save energy while enhancing convenience.</p>
-                </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="section-header">
-            <p class="label">Our Portfolio</p>
-            <h2>Featured Pool Transformations</h2>
-            <p>Browse our collection of stunning pool remodels and get inspired for your own project.</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Gallery Image 1</span>
+    <!-- About Snippet -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Quality Craftsmanship, <em>Every Project</em></h2>
+                    <p>DGOS — D. Gofourth On-Site Solutions — brings decades of expertise to every project. As outdoor living specialists, we understand that your outdoor space is an extension of your home.</p>
+                    <p>From residential backyards to large commercial properties, our team handles everything from initial design through final construction. We're fully licensed, insured, and committed to exceeding expectations.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Fully Licensed</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <span>Fully Insured</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>On-Time Delivery</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                            </svg>
+                            <span>Quality Guaranteed</span>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-outline-dark" style="margin-top: 1rem;">Learn More About Us</a>
                 </div>
-                <div class="gallery-overlay">
-                    <span>Modern Resort Style</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Gallery Image 2</span>
-                </div>
-                <div class="gallery-overlay">
-                    <span>Custom Tile Work</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Gallery Image 3</span>
-                </div>
-                <div class="gallery-overlay">
-                    <span>Water Feature</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Gallery Image 4</span>
-                </div>
-                <div class="gallery-overlay">
-                    <span>LED Lighting</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-                    </svg>
-                    <span>Gallery Image 5</span>
-                </div>
-                <div class="gallery-overlay">
-                    <span>Deck Renovation</span>
+                
+                <div class="about-image">
+                    <!-- Replace with: <img src="./img/about.jpg" alt="DGOS Team"> -->
+                    <div class="about-image-placeholder">
+                        <span>Team / Project Photo</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="section-header">
-            <p class="label">Testimonials</p>
-            <h2>What Our Clients Say</h2>
-        </div>
-        <div class="testimonials-slider">
-            <div class="testimonial">
-                <p class="testimonial-quote">The team exceeded all our expectations. Our pool looks like it belongs at a five-star resort. The attention to detail and craftsmanship is unmatched. We couldn't be happier with the results!</p>
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">DGOS transformed our backyard into exactly what we envisioned. Professional from start to finish, and the quality of work exceeded our expectations. We couldn't be happier with our new outdoor living space.</p>
                 <div class="testimonial-author">
                     <strong>John & Sarah M.</strong>
                     <span>Scottsdale, AZ</span>
                 </div>
             </div>
-            <div class="testimonial-dots">
-                <span class="testimonial-dot active"></span>
-                <span class="testimonial-dot"></span>
-                <span class="testimonial-dot"></span>
-            </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="section-header">
-            <p class="label">Our Process</p>
-            <h2>From Vision to Reality</h2>
-            <p>We've refined our process over nearly two decades to ensure a seamless, stress-free experience.</p>
-        </div>
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="process-number">01</div>
-                <h3>Consultation</h3>
-                <p>We visit your home, assess your pool, discuss your vision, and provide a detailed proposal with options.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-number">02</div>
-                <h3>Design</h3>
-                <p>Our design team creates a customized plan, helping you select materials, colors, and features.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-number">03</div>
-                <h3>Construction</h3>
-                <p>Our skilled craftsmen execute the project with precision, keeping you informed every step of the way.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-number">04</div>
-                <h3>Completion</h3>
-                <p>Final inspection, pool startup, and a thorough walkthrough to ensure your complete satisfaction.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- CTA -->
+    <section class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Transform Your Pool?</h2>
-            <p>Schedule your free consultation today and take the first step toward the backyard of your dreams. Our team is ready to bring your vision to life.</p>
+            <h2>Ready to Start Your Project?</h2>
+            <p>Whether you're planning a complete landscape overhaul, dreaming of a custom pool, or need expert site work — DGOS has you covered. Let's discuss your vision.</p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-dark">Get Your Free Quote</a>
-                <a href="tel:555-123-4567" class="btn btn-outline" style="color: var(--color-midnight); border-color: var(--color-midnight);">Call (555) 123-4567</a>
+                <a href="contact.html" class="btn btn-white">Get a Free Quote</a>
+                <a href="tel:555-123-4567" class="btn btn-outline" style="border-color: rgba(255,255,255,0.5);">Call (555) 123-4567</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-info">
-            <h2>Let's Start Your Project</h2>
-            <p>Ready to transform your pool? Contact us today for a free consultation and estimate. We're here to answer all your questions and help bring your vision to life.</p>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-item-content">
-                        <strong>Phone</strong>
-                        <span>(555) 123-4567</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-item-content">
-                        <strong>Email</strong>
-                        <span>info@aqualuxepools.com</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-item-content">
-                        <strong>Service Area</strong>
-                        <span>Phoenix Metro & Surrounding Areas</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-item-content">
-                        <strong>Hours</strong>
-                        <span>Mon-Fri: 7am-5pm | Sat: 8am-12pm</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contact-form">
-            <form>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name *</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name *</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interested In</label>
-                    <select id="service" name="service">
-                        <option value="">Select a service...</option>
-                        <option value="resurfacing">Pool Resurfacing</option>
-                        <option value="tile">Tile & Coping</option>
-                        <option value="deck">Deck Remodeling</option>
-                        <option value="water-features">Water Features</option>
-                        <option value="lighting">LED Lighting</option>
-                        <option value="equipment">Equipment Upgrades</option>
-                        <option value="complete">Complete Renovation</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Tell Us About Your Project</label>
-                    <textarea id="message" name="message" placeholder="Describe your pool, what you'd like to change, and any specific features you're interested in..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Request Free Consultation</button>
-            </form>
         </div>
     </section>
 
@@ -1651,11 +278,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">
-                    <div class="logo-placeholder">Logo</div>
-                    <span class="logo-text">Gofourth Pools</span>
+                <a href="index.html" class="logo">
+                    <img src="./img/DarkBackground.png" alt="DGOS">
                 </a>
-                <p>Transforming backyards into private paradises since 2005. Licensed, insured, and committed to excellence in every project.</p>
+                <p>D. Gofourth On-Site Solutions, LLC — Outdoor Living Specialists serving Arizona with quality landscape construction and custom pools.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -1667,110 +293,92 @@
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
                     </a>
-                    <a href="#" aria-label="Pinterest">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
+            
             <div class="footer-column">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#services">Pool Resurfacing</a></li>
-                    <li><a href="#services">Tile & Coping</a></li>
-                    <li><a href="#services">Deck Remodeling</a></li>
-                    <li><a href="#services">Water Features</a></li>
-                    <li><a href="#services">LED Lighting</a></li>
+                    <li><a href="services.html#landscape">Landscape</a></li>
+                    <li><a href="services.html#hardscape">Hardscape</a></li>
+                    <li><a href="services.html#outdoor-living">Outdoor Living</a></li>
+                    <li><a href="services.html#pool">Pool Construction</a></li>
+                    <li><a href="services.html#pool-remodeling">Pool Remodeling</a></li>
                 </ul>
             </div>
+            
+            <div class="footer-column">
+                <h4>More Services</h4>
+                <ul>
+                    <li><a href="services.html#site-prep">Site Prep</a></li>
+                    <li><a href="services.html#land-clearing">Land Clearing</a></li>
+                    <li><a href="services.html#demo">Demo</a></li>
+                    <li><a href="services.html#design">Design</a></li>
+                    <li><a href="services.html#construction">Construction</a></li>
+                </ul>
+            </div>
+            
             <div class="footer-column">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#gallery">Our Work</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Financing</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Warranty Info</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="about.html">About DGOS</a></li>
+                    <li><a href="gallery.html">Our Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <span>© 2025 Gofourth Pools. All rights reserved. Licensed & Insured. ROC# 000000</span>
-            <span>Website by Your Agency Name</span>
+            <span>© 2025 DGOS - D. Gofourth On-Site Solutions, LLC. All rights reserved.</span>
+            <span>Licensed & Insured</span>
         </div>
     </footer>
 
     <script>
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('nav-logo');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 navbar.classList.add('scrolled');
+                navLogo.src = './img/DarkBackground.png';
             } else {
                 navbar.classList.remove('scrolled');
+                navLogo.src = './img/DarkBackground.png';
             }
         });
 
-        // Smooth scroll for anchor links
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const toggle = document.getElementById('mobileToggle');
+            const overlay = document.getElementById('mobileOverlay');
+            
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+        });
+
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        });
-
-        // Testimonial dots interaction (placeholder for slider)
-        const dots = document.querySelectorAll('.testimonial-dot');
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                dots.forEach(d => d.classList.remove('active'));
-                dot.classList.add('active');
-            });
-        });
-
-        // Form submission handler
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your inquiry! We will contact you within 24 hours.');
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .stat-item, .process-step, .gallery-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
         });
     </script>
 </body>

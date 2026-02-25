@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | DGOS - D. Gofourth On-Site Solutions</title>
+    <meta name="description" content="DGOS offers complete outdoor solutions: landscape construction, hardscaping, custom pools, pool remodeling, site prep, land clearing, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="light scrolled">
+        <a href="index.html" class="logo">
+            <img src="./img/DarkBackground.png" alt="DGOS" id="nav-logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <div class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Our Services</h1>
+        <p>Complete outdoor solutions from design through construction. Here's everything DGOS offers.</p>
+    </header>
+
+    <!-- Services Overview -->
+    <section class="services-section" style="background: var(--color-white);">
+        <div class="container">
+            <div class="service-categories" style="margin-bottom: 4rem;">
+                <div class="service-category-card primary">
+                    <h3>Landscape Construction</h3>
+                    <p>Our primary specialty — creating stunning outdoor environments from the ground up. From initial site prep to finished hardscapes and living spaces.</p>
+                    <div class="category-list">
+                        <span>Landscape</span>
+                        <span>Hardscape</span>
+                        <span>Outdoor Living</span>
+                        <span>Site Prep</span>
+                        <span>Land Clearing</span>
+                        <span>Demo</span>
+                        <span>Design</span>
+                        <span>Construction</span>
+                    </div>
+                </div>
+                <div class="service-category-card secondary">
+                    <h3>Custom Pool Construction</h3>
+                    <p>Expert pool building and remodeling services. Whether you're dreaming of a new custom pool or refreshing an existing one, we deliver exceptional results.</p>
+                    <div class="category-list">
+                        <span>Pool Construction</span>
+                        <span>Pool Remodeling</span>
+                        <span>Water Features</span>
+                        <span>Pool Decks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section style="padding: 4rem 5%; background: var(--color-cream);">
+        <div class="container">
+            
+            <!-- Commercial -->
+            <div class="services-detail-grid" id="commercial" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/comm.JPEG" alt="Commercial Projects">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Commercial Projects</h3>
+                        <p>Large-scale landscape and outdoor construction for businesses, HOAs, retail centers, and commercial properties. We handle projects of all sizes with the same attention to detail and quality craftsmanship.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Residential -->
+            <div class="services-detail-grid" id="residential" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/res.JPEG" alt="Residential Projects">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Residential Projects</h3>
+                        <p>Transform your backyard into the outdoor living space you've always wanted. From complete landscape overhauls to targeted improvements, we work with homeowners to create personalized outdoor environments.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="services-detail-grid" id="design" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/design.JPEG" alt="Design Services">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Design Services</h3>
+                        <p>Custom outdoor design tailored to your vision, property, and budget. We work with you to create detailed plans before breaking ground, ensuring the final result matches your expectations.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construction -->
+            <div class="services-detail-grid" id="construction" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/construction.JPEG" alt="Construction Services">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Construction</h3>
+                        <p>Expert construction from start to finish. Our experienced crews handle every phase of your project with precision and professionalism, keeping you informed every step of the way.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landscape -->
+            <div class="services-detail-grid" id="landscape" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/landscape.JPEG" alt="Landscape Services">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Landscape</h3>
+                        <p>Complete landscape installation including plants, trees, irrigation systems, drainage solutions, and more. We design and install landscapes that thrive in Arizona's climate while complementing your home.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pool -->
+            <div class="services-detail-grid" id="pool" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/poolcon.JPEG" alt="Pool Construction">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Pool Construction</h3>
+                        <p>Custom pool construction designed to your specifications. From classic designs to modern geometric pools, we build pools that become the centerpiece of your outdoor living space.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pool Remodeling -->
+            <div class="services-detail-grid" id="pool-remodeling" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/poolremodel.JPEG" alt="Pool Remodeling">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Pool Remodeling</h3>
+                        <p>Refresh and upgrade your existing pool with new surfaces, tile, coping, decking, water features, lighting, and equipment upgrades. Transform an aging pool into a modern retreat.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardscape -->
+            <div class="services-detail-grid" id="hardscape" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/hardscape.JPEG" alt="Hardscape Services">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Hardscape</h3>
+                        <p>Pavers, natural stone, concrete, retaining walls, walkways, driveways, and more. Our hardscape work creates durable, beautiful surfaces that define your outdoor spaces.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outdoor Living -->
+            <div class="services-detail-grid" id="outdoor-living" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="./img/outdoorspace.JPEG" alt="Outdoor Living Spaces">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Outdoor Living Spaces</h3>
+                        <p>Patios, pergolas, outdoor kitchens, fire features, seating areas, shade structures, and entertainment spaces. Create functional outdoor rooms that extend your living space.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Site Prep -->
+            <div class="services-detail-grid" id="site-prep" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <div class="service-detail-image-placeholder">Site Prep Image</div>
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Site Prep</h3>
+                        <p>Professional site preparation including grading, excavation, soil work, and drainage. Proper site prep is the foundation of every successful outdoor project.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Land Clearing -->
+            <div class="services-detail-grid" id="land-clearing" style="margin-bottom: 2rem;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <div class="service-detail-image-placeholder">Land Clearing Image</div>
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Land Clearing</h3>
+                        <p>Clear and prepare your land for development. We handle brush removal, tree clearing, debris hauling, and rough grading to get your property ready for construction.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo -->
+            <div class="services-detail-grid" id="demo" style="margin-bottom: 0;">
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <div class="service-detail-image-placeholder">Demo Image</div>
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Demolition</h3>
+                        <p>Safe, efficient demolition of existing structures, concrete, pools, landscaping, and more. We handle removal and disposal so you can start fresh with your new project.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today for a free consultation and quote. We'll discuss your project, answer your questions, and help you plan your perfect outdoor space.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-white">Get a Free Quote</a>
+                <a href="tel:555-123-4567" class="btn btn-outline" style="border-color: rgba(255,255,255,0.5);">Call (555) 123-4567</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="./img/DarkBackground.png" alt="DGOS">
+                </a>
+                <p>D. Gofourth On-Site Solutions, LLC — Outdoor Living Specialists serving Arizona with quality landscape construction and custom pools.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#landscape">Landscape</a></li>
+                    <li><a href="services.html#hardscape">Hardscape</a></li>
+                    <li><a href="services.html#outdoor-living">Outdoor Living</a></li>
+                    <li><a href="services.html#pool">Pool Construction</a></li>
+                    <li><a href="services.html#pool-remodeling">Pool Remodeling</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>More Services</h4>
+                <ul>
+                    <li><a href="services.html#site-prep">Site Prep</a></li>
+                    <li><a href="services.html#land-clearing">Land Clearing</a></li>
+                    <li><a href="services.html#demo">Demo</a></li>
+                    <li><a href="services.html#design">Design</a></li>
+                    <li><a href="services.html#construction">Construction</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About DGOS</a></li>
+                    <li><a href="gallery.html">Our Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <span>© 2025 DGOS - D. Gofourth On-Site Solutions, LLC. All rights reserved.</span>
+            <span>Licensed & Insured</span>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const toggle = document.getElementById('mobileToggle');
+            const overlay = document.getElementById('mobileOverlay');
+            
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const navHeight = document.getElementById('navbar').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Handle hash on page load
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const target = document.querySelector(window.location.hash);
+                    if (target) {
+                        const navHeight = document.getElementById('navbar').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
