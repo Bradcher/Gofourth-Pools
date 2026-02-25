@@ -1582,19 +1582,23 @@ footer {
 
 .process-step {
     text-align: center;
+    padding: 1.5rem 1rem;
 }
 
 .process-number {
     font-family: var(--font-display);
     font-size: 3rem;
+    font-weight: 500;
     color: var(--color-gold);
     margin-bottom: 1rem;
+    line-height: 1;
 }
 
 .process-step h4 {
     font-family: var(--font-display);
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
     color: var(--color-charcoal);
 }
 
@@ -1617,7 +1621,22 @@ footer {
     
     .process-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .process-step {
+        background: var(--color-cream);
+        border-radius: 12px;
+        padding: 2rem 1.5rem;
+    }
+    
+    .process-number {
+        font-size: 2.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .process-step h4 {
+        font-size: 1.15rem;
     }
 }
 
@@ -1636,16 +1655,26 @@ footer {
         font-size: 1.25rem;
     }
     
+    .process-grid {
+        gap: 1rem;
+    }
+    
+    .process-step {
+        padding: 1.5rem 1rem;
+    }
+    
     .process-number {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
     
     .process-step h4 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
     }
     
     .process-step p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 }
 
