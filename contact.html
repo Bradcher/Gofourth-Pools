@@ -65,7 +65,7 @@
                             </div>
                             <div class="contact-item-content">
                                 <strong>Phone</strong>
-                                <a href="tel:555-123-4567">(602) 448-8499</a>
+                                <a href="tel:555-123-4567">(555) 123-4567</a>
                             </div>
                         </div>
                         
@@ -77,7 +77,7 @@
                             </div>
                             <div class="contact-item-content">
                                 <strong>Email</strong>
-                                <a href="mailto:dustin@dgosaz.com">dustin@dgosaz.com</a>
+                                <a href="/cdn-cgi/l/email-protection#1b72757d745b7f7c746835787476"><span class="__cf_email__" data-cfemail="cda4a3aba28da9aaa2bee3aea2a0">[email&#160;protected]</span></a>
                             </div>
                         </div>
                         
@@ -109,7 +109,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/xojpwkza" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>
@@ -161,6 +161,8 @@
                             <label for="message">Tell Us About Your Project</label>
                             <textarea id="message" name="message" placeholder="Describe your project, timeline, budget range, and any specific requirements..."></textarea>
                         </div>
+                        
+                        <input type="hidden" name="_subject" value="New DGOS Website Inquiry">
                         
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -241,7 +243,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile menu toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -259,13 +261,6 @@
             link.addEventListener('click', () => {
                 toggleMobileMenu();
             });
-        });
-
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! DGOS will contact you within 24 hours.');
-            this.reset();
         });
     </script>
 </body>
